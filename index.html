@@ -42,6 +42,7 @@
           type="text"
           class="w-full bg-transparent outline-none text-white"
           placeholder="Cari di sini..."
+          autocomplete="off"
         />
         <svg
           id="closeInputNav"
@@ -96,14 +97,16 @@
           <h3 class="font-bold text-3xl">Masuk</h3>
           <p class="font-medium text-sm mt-1">Masuk ke Realm-Yoke</p>
         </div>
-        <div class="mt-12 flex flex-col w-[85%] mx-auto">
+        <form action="" class="mt-12 flex flex-col w-[85%] mx-auto">
           <label for="" class="">Email</label>
           <input
+            spellcheck="false"
             type="email"
             class="mb-4 h-10 bg-transparent border-b outline-none"
           />
           <label for="" class="">Password</label>
           <input
+            spellcheck="false"
             type="password"
             class="h-10 bg-transparent border-b outline-none"
           />
@@ -146,7 +149,7 @@
             </svg>
             Masuk Facebook
           </button>
-        </div>
+        </form>
       </div>
     </section>
 
