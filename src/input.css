@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.scale_0 {
+  transform: scale(0);
+}
+
+.scale_1 {
+  transform: scale(1);
+}

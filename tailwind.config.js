@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["index.html"],
+  content: ["index.html", "src/script.js"],
   theme: {
     extend: {
       colors: {
@@ -8,6 +8,9 @@ module.exports = {
         dark2: "#393E46",
         dark3: "#00ADB5",
         dark4: "#00FFF5",
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },
