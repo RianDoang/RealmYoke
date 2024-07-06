@@ -14,11 +14,19 @@
       rel="stylesheet"
     />
 
-    <title>RY Store</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>RY Games</title>
   </head>
-  <body class="bg-dark1 font-poppins">
+  <body class="bg-slate-900 font-poppins">
     <nav
-      class="bg-dark2 text-white flex justify-between items-center w-full h-[70px]"
+      class="bg-slate-800 text-white flex justify-between items-center w-full h-[70px]"
     >
       <div class="ml-3 md:ml-14">
         <!-- <p class="font-bold text-lg">LOGO</p> -->
@@ -78,7 +86,7 @@
         <div class="mr-3 md:mr-14">
           <button
             id="loginBtn"
-            class="bg-dark3 py-2 px-3 font-semibold tracking-wide rounded-lg text-sm md:px-4"
+            class="bg-amber-500 py-2 px-3 font-semibold tracking-wide rounded-lg text-sm transition duration-200 hover:bg-amber-600 md:px-4"
           >
             MASUK
           </button>
@@ -86,17 +94,18 @@
       </div>
     </nav>
 
+    <!-- Popup Login -->
     <section
       id="loginPage"
-      class="flex items-center justify-center absolute top-0 left-0 -z-10 w-full backdrop-blur-0 h-screen text-white transition duration-300"
+      class="flex items-center justify-center absolute top-0 left-0 z-10 w-full backdrop-blur-0 h-full text-white transition duration-300"
     >
       <div
         id="loginParent"
-        class="scale_0 flex flex-col w-[90%] bg-dark2 py-7 rounded-3xl shadow-lg relative transition duration-300 md:w-[26rem]"
+        class="scale_0 flex flex-col w-[90%] bg-slate-800 py-7 rounded-3xl shadow-md relative transition duration-300 md:w-[26rem] shadow-slate-600"
       >
         <div
           id="closeLogin"
-          class="absolute top-4 left-4 bg-transparent p-3 cursor-pointer rounded-full transition duration-200 hover:bg-gray-500"
+          class="absolute top-4 left-4 bg-transparent p-3 cursor-pointer rounded-full transition duration-200 hover:bg-gray-700"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -131,25 +140,25 @@
           />
           <a
             href=""
-            class="text-xs mt-2 text-dark4 transition duration-300 hover:opacity-70"
+            class="text-xs mt-2 text-amber-500 transition duration-300 hover:text-amber-600"
             >Tidak ingat kata sandi?</a
           >
           <button
-            class="py-3 rounded-full mt-6 bg-dark4 text-dark1 font-bold transition duration-300 hover:opacity-70"
+            class="py-3 rounded-full mt-6 bg-amber-500 text-white font-bold transition duration-300 hover:bg-amber-600"
           >
             Masuk
           </button>
           <p class="text-sm text-center mt-2">
             Belum punya akun?<a
               href=""
-              class="text-dark4 ml-1 transition duration-300 hover:opacity-70"
+              class="text-amber-500 ml-1 transition duration-300 hover:text-amber-600"
               >Daftar sekarang</a
             >
           </p>
           <div
             class="h-[1px] my-8 w-full bg-white opacity-40 flex items-center justify-center"
           >
-            <p class="px-2 bg-dark2">OR</p>
+            <p class="px-2 bg-slate-800">OR</p>
           </div>
           <button
             class="py-3 mb-5 rounded-full bg-white text-black font-medium flex items-center justify-center transition duration-300 hover:opacity-70"
@@ -203,6 +212,321 @@
             </div>
           </button>
         </form>
+      </div>
+    </section>
+
+    <section class="font-montserrat w-full mt-5">
+      <p class="uppercase font-semibold text-white text-2xl ml-5">Populer</p>
+      <div
+        class="mx-auto my-5 w-[95%] flex flex-wrap items-center justify-center gap-3 md:gap-0 md:justify-around md:gap-y-10"
+      >
+        <!-- Lords of the Fallen Deluxe Edition -->
+        <a
+          href=""
+          class="group flex flex-col text-black bg-amber-500 object-cover w-[48%] p-2 rounded-md transition duration-200 hover:bg-opacity-75 md:w-[30%]"
+        >
+          <p class="whitespace-nowrap overflow-hidden text-ellipsis font-bold">
+            Lords of the Fallen Deluxe Edition
+          </p>
+          <img
+            src="src/GamesCover/lords-of-the-fallen-pc-cover.jpg"
+            alt=""
+            class="rounded-sm my-1 p-1 bg-amber-800"
+          />
+          <div class="flex items-center justify-end font-bold mx-1 mt-1">
+            <p
+              class="py-1 px-4 bg-amber-200 rounded-md text-sm transition duration-200 group-hover:bg-opacity-75"
+            >
+              See
+            </p>
+          </div>
+        </a>
+
+        <!-- Drug Dealer Simulator 2 -->
+        <a
+          href=""
+          class="group flex flex-col text-black bg-amber-500 object-cover w-[48%] p-2 rounded-md transition duration-200 hover:bg-opacity-75 md:w-[30%]"
+        >
+          <p class="whitespace-nowrap overflow-hidden text-ellipsis font-bold">
+            Drug Dealer Simulator 2
+          </p>
+          <img
+            src="src/GamesCover/drug-dealer-simulator-2-pc-cover.jpg"
+            alt=""
+            class="rounded-sm my-1 p-1 bg-amber-800"
+          />
+          <div class="flex items-center justify-end font-bold mx-1 mt-1">
+            <p
+              class="py-1 px-4 bg-amber-200 rounded-md text-sm transition duration-200 group-hover:bg-opacity-75"
+            >
+              See
+            </p>
+          </div>
+        </a>
+
+        <!-- Crown Wars The Black Prince -->
+        <a
+          href=""
+          class="group flex flex-col text-black bg-amber-500 object-cover w-[48%] p-2 rounded-md transition duration-200 hover:bg-opacity-75 md:w-[30%]"
+        >
+          <p class="whitespace-nowrap overflow-hidden text-ellipsis font-bold">
+            Crown Wars The Black Prince
+          </p>
+          <img
+            src="src/GamesCover/crown-wars-the-black-prince-pc-cover.jpg"
+            alt=""
+            class="rounded-sm my-1 p-1 bg-amber-800"
+          />
+          <div class="flex items-center justify-end font-bold mx-1 mt-1">
+            <p
+              class="py-1 px-4 bg-amber-200 rounded-md text-sm transition duration-200 group-hover:bg-opacity-75"
+            >
+              See
+            </p>
+          </div>
+        </a>
+
+        <!-- Cities Skylines II Ultimate Edition -->
+        <a
+          href=""
+          class="group flex flex-col text-black bg-amber-500 object-cover w-[48%] p-2 rounded-md transition duration-200 hover:bg-opacity-75 md:w-[30%]"
+        >
+          <p class="whitespace-nowrap overflow-hidden text-ellipsis font-bold">
+            Cities Skylines II Ultimate Edition
+          </p>
+          <img
+            src="src/GamesCover/cities-skylines-ii-ultimate-edition-pc-cover.jpg"
+            alt=""
+            class="rounded-sm my-1 p-1 bg-amber-800"
+          />
+          <div class="flex items-center justify-end font-bold mx-1 mt-1">
+            <p
+              class="py-1 px-4 bg-amber-200 rounded-md text-sm transition duration-200 group-hover:bg-opacity-75"
+            >
+              See
+            </p>
+          </div>
+        </a>
+
+        <!-- Nickelodeon All-Star Brawl 2 Deluxe Edition -->
+        <a
+          href=""
+          class="group flex flex-col text-black bg-amber-500 object-cover w-[48%] p-2 rounded-md transition duration-200 hover:bg-opacity-75 md:w-[30%]"
+        >
+          <p class="whitespace-nowrap overflow-hidden text-ellipsis font-bold">
+            Nickelodeon All-Star Brawl 2 Deluxe Edition
+          </p>
+          <img
+            src="src/GamesCover/nickelodeon-all-star-brawl-2-pc-cover.jpg"
+            alt=""
+            class="rounded-sm my-1 p-1 bg-amber-800"
+          />
+          <div class="flex items-center justify-end font-bold mx-1 mt-1">
+            <p
+              class="py-1 px-4 bg-amber-200 rounded-md text-sm transition duration-200 group-hover:bg-opacity-75"
+            >
+              See
+            </p>
+          </div>
+        </a>
+
+        <!-- Broken Roads -->
+        <a
+          href=""
+          class="group flex flex-col text-black bg-amber-500 object-cover w-[48%] p-2 rounded-md transition duration-200 hover:bg-opacity-75 md:w-[30%]"
+        >
+          <p class="whitespace-nowrap overflow-hidden text-ellipsis font-bold">
+            Broken Roads
+          </p>
+          <img
+            src="src/GamesCover/broken-roads-pc-cover.jpg"
+            alt=""
+            class="rounded-sm my-1 p-1 bg-amber-800"
+          />
+          <div class="flex items-center justify-end font-bold mx-1 mt-1">
+            <p
+              class="py-1 px-4 bg-amber-200 rounded-md text-sm transition duration-200 group-hover:bg-opacity-75"
+            >
+              See
+            </p>
+          </div>
+        </a>
+
+        <!-- Elden Ring Deluxe Edition -->
+        <a
+          href=""
+          class="group flex flex-col text-black bg-amber-500 object-cover w-[48%] p-2 rounded-md transition duration-200 hover:bg-opacity-75 md:w-[30%]"
+        >
+          <p class="whitespace-nowrap overflow-hidden text-ellipsis font-bold">
+            Elden Ring Deluxe Edition
+          </p>
+          <img
+            src="src/GamesCover/elden-ring-pc-cover.jpg"
+            alt=""
+            class="rounded-sm my-1 p-1 bg-amber-800"
+          />
+          <div class="flex items-center justify-end font-bold mx-1 mt-1">
+            <p
+              class="py-1 px-4 bg-amber-200 rounded-md text-sm transition duration-200 group-hover:bg-opacity-75"
+            >
+              See
+            </p>
+          </div>
+        </a>
+
+        <!-- Crime Boss Rockay City -->
+        <a
+          href=""
+          class="group flex flex-col text-black bg-amber-500 object-cover w-[48%] p-2 rounded-md transition duration-200 hover:bg-opacity-75 md:w-[30%]"
+        >
+          <p class="whitespace-nowrap overflow-hidden text-ellipsis font-bold">
+            Crime Boss Rockay City
+          </p>
+          <img
+            src="src/GamesCover/crime-boss-rockay-city-pc-cover.jpg"
+            alt=""
+            class="rounded-sm my-1 p-1 bg-amber-800"
+          />
+          <div class="flex items-center justify-end font-bold mx-1 mt-1">
+            <p
+              class="py-1 px-4 bg-amber-200 rounded-md text-sm transition duration-200 group-hover:bg-opacity-75"
+            >
+              See
+            </p>
+          </div>
+        </a>
+
+        <!-- Last Epoch -->
+        <a
+          href=""
+          class="group flex flex-col text-black bg-amber-500 object-cover w-[48%] p-2 rounded-md transition duration-200 hover:bg-opacity-75 md:w-[30%]"
+        >
+          <p class="whitespace-nowrap overflow-hidden text-ellipsis font-bold">
+            Last Epoch
+          </p>
+          <img
+            src="src/GamesCover/last-epoch-pc-cover.jpg"
+            alt=""
+            class="rounded-sm my-1 p-1 bg-amber-800"
+          />
+          <div class="flex items-center justify-end font-bold mx-1 mt-1">
+            <p
+              class="py-1 px-4 bg-amber-200 rounded-md text-sm transition duration-200 group-hover:bg-opacity-75"
+            >
+              See
+            </p>
+          </div>
+        </a>
+
+        <!-- Dragon Ball Z Kakarot Ultimate Edition -->
+        <a
+          href=""
+          class="group flex flex-col text-black bg-amber-500 object-cover w-[48%] p-2 rounded-md transition duration-200 hover:bg-opacity-75 md:w-[30%]"
+        >
+          <p class="whitespace-nowrap overflow-hidden text-ellipsis font-bold">
+            Dragon Ball Z Kakarot Ultimate Edition
+          </p>
+          <img
+            src="src/GamesCover/dragon-ball-z-kakarot-pc-cover.jpg"
+            alt=""
+            class="rounded-sm my-1 p-1 bg-amber-800"
+          />
+          <div class="flex items-center justify-end font-bold mx-1 mt-1">
+            <p
+              class="py-1 px-4 bg-amber-200 rounded-md text-sm transition duration-200 group-hover:bg-opacity-75"
+            >
+              See
+            </p>
+          </div>
+        </a>
+
+        <!-- PowerWash Simulator -->
+        <a
+          href=""
+          class="group flex flex-col text-black bg-amber-500 object-cover w-[48%] p-2 rounded-md transition duration-200 hover:bg-opacity-75 md:w-[30%]"
+        >
+          <p class="whitespace-nowrap overflow-hidden text-ellipsis font-bold">
+            PowerWash Simulator
+          </p>
+          <img
+            src="src/GamesCover/powerwash-simulator-pc-cover.jpg"
+            alt=""
+            class="rounded-sm my-1 p-1 bg-amber-800"
+          />
+          <div class="flex items-center justify-end font-bold mx-1 mt-1">
+            <p
+              class="py-1 px-4 bg-amber-200 rounded-md text-sm transition duration-200 group-hover:bg-opacity-75"
+            >
+              See
+            </p>
+          </div>
+        </a>
+
+        <!-- IXION Deluxe Edition -->
+        <a
+          href=""
+          class="group flex flex-col text-black bg-amber-500 object-cover w-[48%] p-2 rounded-md transition duration-200 hover:bg-opacity-75 md:w-[30%]"
+        >
+          <p class="whitespace-nowrap overflow-hidden text-ellipsis font-bold">
+            IXION Deluxe Edition
+          </p>
+          <img
+            src="src/GamesCover/ixion-deluxe-pc-cover.jpg"
+            alt=""
+            class="rounded-sm my-1 p-1 bg-amber-800"
+          />
+          <div class="flex items-center justify-end font-bold mx-1 mt-1">
+            <p
+              class="py-1 px-4 bg-amber-200 rounded-md text-sm transition duration-200 group-hover:bg-opacity-75"
+            >
+              See
+            </p>
+          </div>
+        </a>
+
+        <!-- Starfield Premium Edition -->
+        <a
+          href=""
+          class="group flex flex-col text-black bg-amber-500 object-cover w-[48%] p-2 rounded-md transition duration-200 hover:bg-opacity-75 md:w-[30%]"
+        >
+          <p class="whitespace-nowrap overflow-hidden text-ellipsis font-bold">
+            Starfield Premium Edition
+          </p>
+          <img
+            src="src/GamesCover/starfield-pc-cover.jpg"
+            alt=""
+            class="rounded-sm my-1 p-1 bg-amber-800"
+          />
+          <div class="flex items-center justify-end font-bold mx-1 mt-1">
+            <p
+              class="py-1 px-4 bg-amber-200 rounded-md text-sm transition duration-200 group-hover:bg-opacity-75"
+            >
+              See
+            </p>
+          </div>
+        </a>
+
+        <!-- Age of Empires II Definitive Edition -->
+        <a
+          href=""
+          class="group flex flex-col text-black bg-amber-500 object-cover w-[48%] p-2 rounded-md transition duration-200 hover:bg-opacity-75 md:w-[30%]"
+        >
+          <p class="whitespace-nowrap overflow-hidden text-ellipsis font-bold">
+            Age of Empires II Definitive Edition
+          </p>
+          <img
+            src="src/GamesCover/age-of-empires-2-definitive-edition-pc-cover.jpg"
+            alt=""
+            class="rounded-sm my-1 p-1 bg-amber-800"
+          />
+          <div class="flex items-center justify-end font-bold mx-1 mt-1">
+            <p
+              class="py-1 px-4 bg-amber-200 rounded-md text-sm transition duration-200 group-hover:bg-opacity-75"
+            >
+              See
+            </p>
+          </div>
+        </a>
       </div>
     </section>
 
