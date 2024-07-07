@@ -69,7 +69,7 @@ window.addEventListener("click", function (event) {
 
 // Search Game
 const searchInput = document.getElementById("inputNav");
-const gameList = document.getElementById("gameList");
+const gameList = document.querySelector(".gameList");
 const games = gameList.getElementsByTagName("li");
 
 // Fungsi filter game
@@ -88,6 +88,7 @@ searchInput.addEventListener("input", function () {
 });
 // End Search game
 
+// Sliding banner
 const sliderContainer = document.getElementById("sliderContainer");
 let currentIndex = 0;
 
@@ -95,3 +96,43 @@ setInterval(() => {
   currentIndex = (currentIndex + 1) % 3;
   sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
 }, 5000);
+// End Sliding banner
+
+// Btn navigasi
+const btn1 = document.getElementById("btn1");
+const btn2 = document.getElementById("btn2");
+const gameList1 = document.getElementById("gameList1");
+const gameList2 = document.getElementById("gameList2");
+
+btn2.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+  gameList2.classList.add("flex");
+  gameList2.classList.remove("hidden");
+  btn1.classList.remove("bg-amber-800");
+  btn1.classList.remove("border-amber-500");
+  gameList1.classList.add("hidden");
+  gameList1.classList.remove("flex");
+  btn2.classList.add("bg-amber-800");
+  btn2.classList.add("border-amber-500");
+  btn2.classList.remove("border-white");
+});
+
+btn1.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+  gameList2.classList.remove("flex");
+  gameList2.classList.add("hidden");
+  btn1.classList.add("bg-amber-800");
+  btn1.classList.add("border-amber-500");
+  gameList1.classList.remove("hidden");
+  gameList1.classList.add("flex");
+  btn2.classList.remove("bg-amber-800");
+  btn2.classList.remove("border-amber-500");
+  btn2.classList.add("border-white");
+});
+// End Btn navigasi
