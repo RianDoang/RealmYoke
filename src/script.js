@@ -4,6 +4,11 @@ const closeBtn = document.getElementById("closeInputNav");
 
 closeBtn.addEventListener("click", function () {
   input.value = "";
+
+  // Tampilkan kembali semua game
+  Array.from(games).forEach((game) => {
+    game.style.display = "";
+  });
 });
 // End Close Btn Nav
 
@@ -61,3 +66,32 @@ window.addEventListener("click", function (event) {
   }
 });
 // End Login page
+
+// Search Game
+const searchInput = document.getElementById("inputNav");
+const gameList = document.getElementById("gameList");
+const games = gameList.getElementsByTagName("li");
+
+// Fungsi filter game
+searchInput.addEventListener("input", function () {
+  const searchTerm = this.value.toLowerCase();
+
+  Array.from(games).forEach((game) => {
+    const gameName = game.textContent.toLowerCase();
+
+    if (gameName.includes(searchTerm)) {
+      game.style.display = "";
+    } else {
+      game.style.display = "none";
+    }
+  });
+});
+// End Search game
+
+const sliderContainer = document.getElementById("sliderContainer");
+let currentIndex = 0;
+
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % 3;
+  sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+}, 5000);
