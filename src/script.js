@@ -103,21 +103,39 @@ const btn1 = document.getElementById("btn1");
 const btn2 = document.getElementById("btn2");
 const gameList1 = document.getElementById("gameList1");
 const gameList2 = document.getElementById("gameList2");
+const loadingCanvas = document.getElementById("loadingCanvas");
+const indicator = document.getElementById("pageIndicator");
 
 btn2.addEventListener("click", function () {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
   });
-  gameList2.classList.add("flex");
-  gameList2.classList.remove("hidden");
-  btn1.classList.remove("bg-amber-800");
-  btn1.classList.remove("border-amber-500");
-  gameList1.classList.add("hidden");
   gameList1.classList.remove("flex");
+  gameList1.classList.add("hidden");
+
   btn2.classList.add("bg-amber-800");
   btn2.classList.add("border-amber-500");
   btn2.classList.remove("border-white");
+
+  btn1.classList.remove("bg-amber-800");
+  btn1.classList.remove("border-amber-500");
+
+  indicator.innerHTML = "Page 2 of 2";
+
+  loadingCanvas.classList.add("flex");
+  loadingCanvas.classList.remove("hidden");
+
+  setTimeout(() => {
+    gameList2.classList.add("flex");
+    gameList2.classList.remove("hidden");
+
+    gameList1.classList.add("hidden");
+    gameList1.classList.remove("flex");
+
+    loadingCanvas.classList.remove("flex");
+    loadingCanvas.classList.add("hidden");
+  }, 2000);
 });
 
 btn1.addEventListener("click", function () {
@@ -125,14 +143,30 @@ btn1.addEventListener("click", function () {
     top: 0,
     behavior: "smooth",
   });
+  loadingCanvas.classList.add("flex");
+  loadingCanvas.classList.remove("hidden");
+
   gameList2.classList.remove("flex");
   gameList2.classList.add("hidden");
+
   btn1.classList.add("bg-amber-800");
   btn1.classList.add("border-amber-500");
-  gameList1.classList.remove("hidden");
-  gameList1.classList.add("flex");
+
   btn2.classList.remove("bg-amber-800");
   btn2.classList.remove("border-amber-500");
   btn2.classList.add("border-white");
+
+  indicator.innerHTML = "Page 1 of 2";
+
+  setTimeout(() => {
+    gameList1.classList.remove("hidden");
+    gameList1.classList.add("flex");
+
+    gameList2.classList.remove("flex");
+    gameList2.classList.add("hidden");
+
+    loadingCanvas.classList.remove("flex");
+    loadingCanvas.classList.add("hidden");
+  }, 2000);
 });
 // End Btn navigasi

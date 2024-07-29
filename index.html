@@ -255,7 +255,18 @@
     <!-- Game List -->
     <section class="pb-7">
       <p class="uppercase font-semibold text-white text-2xl ml-5">Populer</p>
-      <div id="gameList1" class="gameList flex font-montserrat w-full mt-5">
+
+      <span
+        id="loadingCanvas"
+        class="transform hidden items-center justify-center my-5"
+      >
+        <div
+          class="inline-block h-10 w-10 animate-spin rounded-full border-4 border-solid border-amber-500 border-e-transparent align-[-0.125em] text-surface motion-reduce:animate-[spin_1.5s_linear_infinite]"
+          role="status"
+        ></div>
+      </span>
+
+      <div id="gameList1" class="gameList font-montserrat w-full mt-5 flex">
         <ul
           class="gameList mx-auto my-5 w-[95%] flex flex-wrap items-center justify-center gap-3 md:gap-0 md:justify-around md:gap-y-10"
         >
@@ -915,7 +926,7 @@
 
       <div
         id="navigasi"
-        class="flex items-center justify-center text-white gap-3"
+        class="flex items-center justify-center text-white gap-2.5"
       >
         <p
           class="border border-white py-1 px-2 rounded text-sm"
@@ -942,11 +953,14 @@
         </button> -->
         <button
           id="btn1"
-          class="bg-amber-800 border border-amber-500 py-1 px-2 rounded text-xs"
+          class="bg-amber-800 border border-amber-500 w-6 h-6 rounded text-xs transition duration-200"
         >
           1
         </button>
-        <button id="btn2" class="border border-white py-1 px-2 rounded text-xs">
+        <button
+          id="btn2"
+          class="border border-white w-6 h-6 rounded text-xs transition duration-200"
+        >
           2
         </button>
         <!-- <button
