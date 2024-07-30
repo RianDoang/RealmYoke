@@ -69,14 +69,20 @@ window.addEventListener("click", function (event) {
 
 // Search Game
 const searchInput = document.getElementById("inputNav");
-const gameList = document.querySelector(".gameList");
-const games = gameList.getElementsByTagName("li");
+const gameLists = document.querySelectorAll(".gameList");
+let games = [];
+
+// Mengumpulkan semua elemen <li> dari setiap gameList
+gameLists.forEach((gameList) => {
+  const gameItems = gameList.getElementsByTagName("li");
+  games = games.concat(Array.from(gameItems));
+});
 
 // Fungsi filter game
 searchInput.addEventListener("input", function () {
   const searchTerm = this.value.toLowerCase();
 
-  Array.from(games).forEach((game) => {
+  games.forEach((game) => {
     const gameName = game.textContent.toLowerCase();
 
     if (gameName.includes(searchTerm)) {
